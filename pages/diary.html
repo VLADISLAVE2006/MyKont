@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный дневник</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-code"></i> Портфолио
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Проекты</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="diary.html">Дневник</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container page-section">
+        <h1 class="section-title">Мой учебный прогресс</h1>
+        
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="diary-entries">
+                    <div class="diary-entry">
+                        <div class="d-flex justify-content-between">
+                            <h5>Верстка макета сайта</h5>
+                            <span class="status-completed"><i class="fas fa-check-circle"></i> Завершено</span>
+                        </div>
+                        <p class="text-muted">15 декабря</p>
+                        <p>Изучение основ HTML и CSS, создание адаптивных макетов с использованием Flexbox и Grid.</p>
+                    </div>
+                    
+                    <div class="diary-entry">
+                        <div class="d-flex justify-content-between">
+                            <h5>JavaScript основы</h5>
+                            <span class="status-completed"><i class="fas fa-check-circle"></i> Завершено</span>
+                        </div>
+                        <p class="text-muted">10 декабря</p>
+                        <p>Изучение переменных, функций, циклов, условий и работы с DOM.</p>
+                    </div>
+                    
+                    <div class="diary-entry">
+                        <div class="d-flex justify-content-between">
+                            <h5>Работа с формами</h5>
+                            <span class="status-in-progress"><i class="fas fa-sync-alt"></i> В процессе</span>
+                        </div>
+                        <p class="text-muted">5 декабря</p>
+                        <p>Создание и валидация форм, обработка пользовательского ввода.</p>
+                    </div>
+                    
+                    <div class="diary-entry">
+                        <div class="d-flex justify-content-between">
+                            <h5>Адаптивный дизайн</h5>
+                            <span class="status-in-progress"><i class="fas fa-sync-alt"></i> В процессе</span>
+                        </div>
+                        <p class="text-muted">1 декабря</p>
+                        <p>Изучение медиа-запросов и создание адаптивных интерфейсов для различных устройств.</p>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#addEntryModal">
+                    <i class="fas fa-plus me-2"></i>Добавить запись
+                </button>
+            </div>
+            
+            <div class="col-lg-4">
+                <h3 class="mb-4">Текущие курсы</h3>
+                
+                <div class="course-progress">
+                    <div class="d-flex justify-content-between">
+                        <span>Веб-разработка</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="course-progress">
+                    <div class="d-flex justify-content-between">
+                        <span>JavaScript</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+                    </div>
+                </div>
+                
+                <div class="course-progress">
+                    <div class="d-flex justify-content-between">
+                        <span>React</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 50%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для добавления записи -->
+    <div class="modal fade" id="addEntryModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Добавить учебную запись</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addEntryForm">
+                        <div class="mb-3">
+                            <label for="entryTitle" class="form-label">Название</label>
+                            <input type="text" class="form-control" id="entryTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="entryDate" class="form-label">Дата</label>
+                            <input type="date" class="form-control" id="entryDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="entryDescription" class="form-label">Описание</label>
+                            <textarea class="form-control" id="entryDescription" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Статус</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="entryStatus" id="statusCompleted" value="completed" checked>
+                                    <label class="form-check-label" for="statusCompleted">Завершено</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="entryStatus" id="statusInProgress" value="in-progress">
+                                    <label class="form-check-label" for="statusInProgress">В процессе</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary" id="saveEntryBtn">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2025 Контакты</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('saveEntryBtn').addEventListener('click', function() {
+            alert('Запись успешно добавлена!');
+            document.getElementById('addEntryForm').reset();
+            var modal = bootstrap.Modal.getInstance(document.getElementById('addEntryModal'));
+            modal.hide();
+        });
+    </script>
+</body>
+</html>

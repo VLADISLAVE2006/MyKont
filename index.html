@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио студента-разработчика</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code"></i> Портфолио
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/projects.html">Проекты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/diary.html">Дневник</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная страница -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Привет! Я студент группы ЭФБО-05-24</h1>
+                    <p class="lead">Увлекаюсь веб-разработкой и созданием современных цифровых решений</p>
+                    <a href="../assets/resume.pdf" class="btn btn-primary btn-lg mt-3" download>
+                        <i class="fas fa-download me-2"></i>Скачать резюме
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/icons/photo.png" alt="Фото студента">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container page-section">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="section-title">Мои навыки</h2>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>HTML/CSS</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>JavaScript</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Bootstrap</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>React</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title">Лучшие проекты</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="project-preview text-center">
+                            <div class="preview-box">П1</div>
+                            <p class="mt-2">Личный сайт</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="project-preview text-center">
+                            <div class="preview-box">П2</div>
+                            <p class="mt-2">Todo-приложение</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="project-preview text-center">
+                            <div class="preview-box">П3</div>
+                            <p class="mt-2">Интернет-магазин</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2025 Контакты</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

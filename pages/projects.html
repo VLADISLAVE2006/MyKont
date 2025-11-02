@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои проекты</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-code"></i> Портфолио
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="projects.html">Проекты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="diary.html">Дневник</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container page-section">
+        <h1 class="section-title">Мои проекты</h1>
+        
+        <div class="text-center mb-4">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-outline-primary active">Все</button>
+                <button type="button" class="btn btn-outline-primary">HTML</button>
+                <button type="button" class="btn btn-outline-primary">JS</button>
+                <button type="button" class="btn btn-outline-primary">React</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                    <img src="../images/icons/i1.jpg" class="card-img-top" alt="Личный сайт">
+                    <div class="card-body">
+                        <h5 class="card-title">Личный сайт</h5>
+                        <p class="card-text">HTML, CSS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                    <img src="../images/icons/i2.jpg" class="card-img-top" alt="Todo-приложение">
+                    <div class="card-body">
+                        <h5 class="card-title">Todo-приложение</h5>
+                        <p class="card-text">JavaScript</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                    <img src="../images/icons/i3.jpg" class="card-img-top" alt="Интернет-магазин">
+                    <div class="card-body">
+                        <h5 class="card-title">Интернет-магазин</h5>
+                        <p class="card-text">React</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal4">
+                    <img src="../images/icons/i4.jpg" class="card-img-top" alt="Портфолио">
+                    <div class="card-body">
+                        <h5 class="card-title">Портфолио</h5>
+                        <p class="card-text">Bootstrap</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальные окна для проектов -->
+    <div class="modal fade" id="projectModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Личный сайт</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/700x400" class="img-fluid mb-3" alt="Личный сайт">
+                    <p>Полное описание проекта личного сайта. Этот проект был создан с использованием чистого HTML и CSS. Включает в себя адаптивный дизайн, современную типографику и интерактивные элементы.</p>
+                    <p><strong>Технологии:</strong> HTML5, CSS3, JavaScript</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary">Живая версия</a>
+                    <a href="#" class="btn btn-outline-primary">Исходный код</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectModal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Todo-приложение</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/700x400" class="img-fluid mb-3" alt="Todo-приложение">
+                    <p>Интерактивное приложение для управления задачами. Позволяет добавлять, редактировать, удалять и отмечать задачи как выполненные. Данные сохраняются в локальном хранилище браузера.</p>
+                    <p><strong>Технологии:</strong> JavaScript, LocalStorage, CSS</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary">Живая версия</a>
+                    <a href="#" class="btn btn-outline-primary">Исходный код</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectModal3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Интернет-магазин</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/700x400" class="img-fluid mb-3" alt="Интернет-магазин">
+                    <p>Полнофункциональный интернет-магазин с каталогом товаров, корзиной покупок и системой оформления заказов. Реализована фильтрация товаров по категориям и поиск.</p>
+                    <p><strong>Технологии:</strong> React, React Router, Context API</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary">Живая версия</a>
+                    <a href="#" class="btn btn-outline-primary">Исходный код</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectModal4" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Портфолио</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/700x400" class="img-fluid mb-3" alt="Портфолио">
+                    <p>Адаптивный сайт-портфолио с современным дизайном. Включает разделы с информацией о себе, проектами, навыками и контактной формой. Оптимизирован для различных устройств.</p>
+                    <p><strong>Технологии:</strong> Bootstrap, HTML5, CSS3</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary">Живая версия</a>
+                    <a href="#" class="btn btn-outline-primary">Исходный код</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2025 Контакты</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

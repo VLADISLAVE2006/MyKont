@@ -323,3 +323,59 @@ footer {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     background: linear-gradient(45deg, #3498db, #2c3e50);
 }
+
+/* Исправление для прижатия футера */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/* Исправление для карточек проектов */
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Гарантия, что изображения загружаются */
+.preview-box img {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Исправление модальных окон */
+.modal-header {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Стили для GitHub ссылки */
+.github-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.github-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- Навигация -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
@@ -38,93 +38,171 @@
     </nav>
 
     <!-- Главная страница -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Привет! Я студент группы ЭФБО-05</h1>
-                    <p class="lead">Увлекаюсь веб-разработкой и созданием современных цифровых решений</p>
-                    <a href="assets/resume.pdf" class="btn btn-primary btn-lg mt-3" download>
-                        <i class="fas fa-download me-2"></i>Скачать резюме
-                    </a>
+    <main class="flex-grow-1">
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Привет! Я студент группы ЭФБО-05</h1>
+                        <p class="lead">Увлекаюсь веб-разработкой и созданием современных цифровых решений</p>
+                        <a href="assets/resume.pdf" class="btn btn-primary btn-lg mt-3" download>
+                            <i class="fas fa-download me-2"></i>Скачать резюме
+                        </a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/icons/photo.png" alt="Фото студента" onerror="this.src='https://picsum.photos/400/400?random=5'">
+                    </div>
                 </div>
-                <div class="hero-image">
-                    <img src="images/icons/photo.png" alt="Фото студента">
+            </div>
+        </section>
+
+        <div class="container page-section">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Мои навыки</h2>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML/CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Bootstrap</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>React</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">Лучшие проекты</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="project-preview text-center" data-bs-toggle="modal" data-bs-target="#mainProjectModal1" style="cursor: pointer;">
+                                <div class="preview-box">
+                                    <img src="images/icons/i1.jpg" alt="Личный сайт" class="img-fluid" onerror="this.src='https://picsum.photos/300/200?random=1'">
+                                </div>
+                                <p class="mt-2">Личный сайт</p>
+                                <small class="text-muted">HTML, CSS, JavaScript</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="project-preview text-center" data-bs-toggle="modal" data-bs-target="#mainProjectModal2" style="cursor: pointer;">
+                                <div class="preview-box">
+                                    <img src="images/icons/i2.jpg" alt="Todo-приложение" class="img-fluid" onerror="this.src='https://picsum.photos/300/200?random=2'">
+                                </div>
+                                <p class="mt-2">Todo-приложение</p>
+                                <small class="text-muted">JavaScript</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="project-preview text-center" data-bs-toggle="modal" data-bs-target="#mainProjectModal3" style="cursor: pointer;">
+                                <div class="preview-box">
+                                    <img src="images/icons/i3.jpg" alt="Интернет-магазин" class="img-fluid" onerror="this.src='https://picsum.photos/300/200?random=3'">
+                                </div>
+                                <p class="mt-2">Интернет-магазин</p>
+                                <small class="text-muted">React</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <div class="container page-section">
-        <div class="row">
-            <div class="col-lg-6">
-                <h2 class="section-title">Мои навыки</h2>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>HTML/CSS</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
+    <!-- Модальные окна для проектов на главной -->
+    <div class="modal fade" id="mainProjectModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Личный сайт</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>JavaScript</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
-                    </div>
+                <div class="modal-body">
+                    <img src="images/icons/i1.jpg" class="img-fluid mb-3" alt="Личный сайт" onerror="this.src='https://picsum.photos/800/400?random=1'">
+                    <h6>Описание проекта:</h6>
+                    <p>Полное описание проекта личного сайта. Этот проект был создан с использованием чистого HTML и CSS. Включает в себя адаптивный дизайн, современную типографику и интерактивные элементы. Сайт имеет несколько страниц с информацией о себе, портфолио проектов и контактной формой.</p>
+                    <p><strong>Технологии:</strong> HTML5, CSS3, JavaScript</p>
+                    <p><strong>Особенности:</strong> Адаптивный дизайн, кроссбраузерность, семантическая верстка</p>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Bootstrap</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>React</span>
-                        <span>60%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 60%"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <h2 class="section-title">Лучшие проекты</h2>
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <div class="project-preview text-center">
-                            <div class="preview-box">П1</div>
-                            <p class="mt-2">Личный сайт</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="project-preview text-center">
-                            <div class="preview-box">П2</div>
-                            <p class="mt-2">Todo-приложение</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="project-preview text-center">
-                            <div class="preview-box">П3</div>
-                            <p class="mt-2">Интернет-магазин</p>
-                        </div>
-                    </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/ваш-username/личный-сайт" target="_blank" class="btn btn-primary">Посмотреть код на GitHub</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
+    <div class="modal fade" id="mainProjectModal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Todo-приложение</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/icons/i2.jpg" class="img-fluid mb-3" alt="Todo-приложение" onerror="this.src='https://picsum.photos/800/400?random=2'">
+                    <h6>Описание проекта:</h6>
+                    <p>Интерактивное приложение для управления задачами. Позволяет добавлять, редактировать, удалять и отмечать задачи как выполненные. Данные сохраняются в локальном хранилище браузера. Реализована фильтрация задач по статусу и поиск по задачам.</p>
+                    <p><strong>Технологии:</strong> JavaScript, LocalStorage, CSS3</p>
+                    <p><strong>Особенности:</strong> Сохранение данных в браузере, фильтрация задач, валидация ввода</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/ваш-username/todo-app" target="_blank" class="btn btn-primary">Посмотреть код на GitHub</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mainProjectModal3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Интернет-магазин</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/icons/i3.jpg" class="img-fluid mb-3" alt="Интернет-магазин" onerror="this.src='https://picsum.photos/800/400?random=3'">
+                    <h6>Описание проекта:</h6>
+                    <p>Полнофункциональный интернет-магазин с каталогом товаров, корзиной покупок и системой оформления заказов. Реализована фильтрация товаров по категориям, поиск по названию и цене. Есть возможность оставлять отзывы и рейтинги для товаров.</p>
+                    <p><strong>Технологии:</strong> React, React Router, Context API, Firebase</p>
+                    <p><strong>Особенности:</strong> Аутентификация пользователей, работа с API, пагинация</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/ваш-username/e-commerce" target="_blank" class="btn btn-primary">Посмотреть код на GitHub</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-auto">
         <div class="container text-center">
-            <p>© 2025 Контакты</p>
+            <p>© 2025 Портфолио студента-разработчика. Все права защищены.</p>
         </div>
     </footer>
 
